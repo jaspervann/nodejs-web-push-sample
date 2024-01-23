@@ -20,8 +20,13 @@ console.log(publicVapidKey);
 
 webpush.setVapidDetails("mailto:test@test.com", publicVapidKey, privateVapidKey);
 
+let subscription;
 app.post('/subscribe', (req, res) => {
-    const subscription = req.body;
+    subscription = req.body;
+    res.status(201).json({});
+})
+
+app.get('/notify', (req, res) => {
     res.status(201).json({});
     const payload = JSON.stringify({ title: "Hello World", body: "This is your first push notification" });
     webpush.sendNotification(subscription, payload).catch(console.log);
