@@ -10,15 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client")))
 
 
-const vapidKeys = webpush.generateVAPIDKeys()
-//webpush.setGCMAPIKey(process.env.GCMAPIKEY);
-
-const publicVapidKey = vapidKeys.publicKey;
-const privateVapidKey = vapidKeys.privateKey;
-
-console.log(privateVapidKey , publicVapidKey);
-
-webpush.setVapidDetails("mailto:test@test.com", publicVapidKey, privateVapidKey);
+webpush.setVapidDetails("mailto:test@test.com", BKYUn4rLJeped19WAF0weuvU8PdYLmIjg6bHNS4vFqBa7tiAS6ELWXHiBQJMWpnO20uSFoeeLDB1pYdoi-jp7Dc, hFUIkXfry98sr2e0Wz2f4f_mQUaq4_nT5yUz4-YC9aI);
 
 let subscription;
 app.post('/subscribe', (req, res) => {
