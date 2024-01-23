@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client")))
 
 
-webpush.setVapidDetails("mailto:test@test.com", BKYUn4rLJeped19WAF0weuvU8PdYLmIjg6bHNS4vFqBa7tiAS6ELWXHiBQJMWpnO20uSFoeeLDB1pYdoi-jp7Dc, hFUIkXfry98sr2e0Wz2f4f_mQUaq4_nT5yUz4-YC9aI);
+webpush.setVapidDetails("mailto:test@test.com", "BKYUn4rLJeped19WAF0weuvU8PdYLmIjg6bHNS4vFqBa7tiAS6ELWXHiBQJMWpnO20uSFoeeLDB1pYdoi-jp7Dc", "hFUIkXfry98sr2e0Wz2f4f_mQUaq4_nT5yUz4-YC9aI");
 
 let subscription;
 app.post('/subscribe', (req, res) => {
