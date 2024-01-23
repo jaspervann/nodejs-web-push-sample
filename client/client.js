@@ -32,6 +32,16 @@ if('serviceWorker' in navigator) {
 
 }
 
+
+async function sendNotification() {
+    let res = await fetch("/notify", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+}
+
 async function registerServiceWorker() {
     const register = await navigator.serviceWorker.register('./worker.js', {
         scope: '/'
