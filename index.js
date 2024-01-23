@@ -16,7 +16,7 @@ const vapidKeys = webpush.generateVAPIDKeys()
 const publicVapidKey = vapidKeys.publicKey;
 const privateVapidKey = vapidKeys.privateKey;
 
-console.log(publicVapidKey);
+console.log(privateVapidKey , publicVapidKey);
 
 webpush.setVapidDetails("mailto:test@test.com", publicVapidKey, privateVapidKey);
 
